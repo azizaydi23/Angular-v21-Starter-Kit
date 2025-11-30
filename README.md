@@ -1,209 +1,93 @@
-# Modern Angular Shop 🚀🛒
+# 🚀 Angular v21 Starter Kit
 
-![Angular Build](https://github.com/loiane/angular-shop/actions/workflows/angular.yml/badge.svg?branch=main)
-![Angular Version](https://img.shields.io/badge/Angular-v21-red)
-![Node Version](https://img.shields.io/badge/Node.js-v22+-green)
-![Test Framework](https://img.shields.io/badge/Tests-Vitest-yellow)
-
-A modern Angular sample project showcasing the latest features and best practices, built as an interactive coffee shop application.
-
-## 🎯 Featured Angular Technologies
-
-- **Angular v21** -Latest Angular features
-- **Standalone Components** (v14+) - No NgModule dependencies
-- **Angular Signals** (v16+) - Modern reactive primitives
-- **New Control Flow** (v17+) - @if, @for, @switch syntax
-- **Modern inject()** function - Dependency injection
-- **Angular Material** - UI component library
-- **Vitest Testing** - Modern and fast testing framework (v21+)
-
-## 🛠️ Development Tools & Extensions
-
-### Recommended IDE Setup
-- **Visual Studio Code** - Primary development environment
-- **Angular Language Service** - Essential for Angular development
-- **Angular Essentials Extension Pack** by Loiane - [Install here](https://marketplace.visualstudio.com/items?itemName=loiane.angular-extension-pack)
-
-### Key Extensions Included:
-- Angular Language Service
-- Angular Snippets
-- TypeScript Hero
-- GitLens
-- Prettier
-- ESLint
-- Material Icon Theme
-
-## 📚 Learning Resources
-
-This project includes comprehensive documentation in the `/docs` folder:
-
-- **[Standalone Components Migration](./docs/Standalone-migration.md)** - Complete migration guide
-- **[Angular Signals Guide](./docs/signals.md)** - Modern reactive programming
-- **[Control Flow Syntax](./docs/control-flow.md)** - New @if, @for syntax
-- **[Cart Implementation](./docs/cart-implementation.md)** - State management patterns
-
-## 🧪 Testing Strategy
-
-The project uses **Vitest** instead of Karma for faster test execution:
-
-- **Unit Tests**: Component and service testing
-- **Coverage Reports**: Available in `/coverage` directory
-- **CI/CD Integration**: GitHub Actions automated testing
-- **Test-Driven Development**: Comprehensive test suites
-
-### Test Coverage
-Current test coverage includes:
-- ✅ All services (Cart, Products, Form Utils)
-- ✅ All components (Cart, Products, Shared)
-- ✅ Route configuration
-- ✅ Application bootstrap
-
-## 🔧 Technical Details
-
-### Project Structure
-```
-src/
-├── app/
-│   ├── cart/              # Shopping cart feature
-│   ├── products/          # Product catalog feature
-│   ├── components/        # Shared components
-│   ├── app.routes.ts      # Route configuration
-│   └── app.component.ts   # Root component
-├── public/                # Static assets
-└── styles.scss            # Global styles
-```
-
-### Modern Angular Patterns Used
-
-1. **Standalone Components**: No NgModule dependencies
-   ```typescript
-   @Component({
-     imports: [CommonModule, MatButtonModule],
-     // ...
-   })
-   ```
-
-2. **Signal-based State Management**:
-   ```typescript
-   cartItems = signal<CartItem[]>([]);
-   cartCount = computed(() => this.cartItems().length);
-   ```
-
-3. **Modern Dependency Injection**:
-   ```typescript
-   private cartService = inject(CartService);
-   private router = inject(Router);
-   ```
-
-## 🚀 Deployment
-
-The project includes GitHub Actions for:
-- ✅ **Continuous Integration** - Automated testing
-- ✅ **Build Verification** - Ensure production builds work
-- ✅ **Dependency Updates** - Automated dependency management
-
-### Production Build
-```bash
-npm run build
-# Outputs to dist/ directory
-```
-
-## 🤝 Contributing
-
-This is a demonstration project showcasing modern Angular features. Feel free to:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add/update tests
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👩‍💻 Author
-
-**Loiane Groner**
-- GitHub: [@loiane](https://github.com/loiane)
-- Website: [loiane.com](https://loiane.com)
-- Angular Extension Pack: [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=loiane.angular-extension-pack)
+A clean and modern **Angular v21** starter project built to help you kick off new applications quickly. It highlights the newest Angular capabilities, follows current best practices, and includes a fast testing setup powered by **Vitest**.
 
 ---
 
-⭐ **Star this repository if you found it helpful!** ⭐
+## ✨ What’s Inside
 
-## 📸 Application Screenshots
+This starter uses a collection of up-to-date Angular features:
 
-### Products List Page
-Modern product listing with Material Design components and shopping cart integration:
+### 🔹 **Angular v21**
 
-<p align="center">
-  <img src="./docs/products.png" alt="Products Page - Coffee Shop Main Page" width="100%">
-</p>
+* Latest runtime changes and performance improvements
 
-### Shopping Cart Page
-Interactive cart with quantity management and total calculations:
+### 🔹 **Standalone Components (v14+)**
 
-<p align="center">
-  <img src="./docs/cart.png" alt="Shopping Cart Page" width="100%">
-</p>
+* Build components without relying on NgModules
 
-## 🏗️ Project Architecture
+### 🔹 **Signals (v16+)**
 
-This application demonstrates modern Angular architecture patterns:
+* Lightweight reactive tools for building responsive UIs
 
-- **Feature-based structure** with lazy-loaded routes
-- **Standalone components** eliminating NgModule complexity
-- **Signal-based state management** for cart functionality
-- **Reactive forms** with typed validators
-- **Service-based architecture** with dependency injection
-- **Material Design** for consistent UI/UX
+### 🔹 **Updated Control Flow (v17+)**
 
-### Key Features Implemented
+* Modern template syntax: `@if`, `@for`, and `@switch`
 
-- 🛍️ **Product Catalog** - Browse coffee products with filtering
-- 🛒 **Shopping Cart** - Add/remove items with real-time updates
-- 📱 **Responsive Design** - Mobile-first Material Design
-- 🧪 **Comprehensive Testing** - Vitest unit tests with coverage
+### 🔹 **`inject()` API**
 
-## 🚀 Quick Start Guide
+* Cleaner, simpler dependency injection
 
-### Prerequisites
+### 🔹 **Angular Material**
 
-- **Node.js 22+** - [Download here](https://nodejs.org/)
-- **npm** (comes with Node.js)
-- **Git** (optional, for cloning)
+* Ready-to-use UI components with accessibility baked in
 
-### Installation & Running
+### 🔹 **Vitest (v21+)**
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+* A fast, modern test runner designed for TypeScript projects
 
-2. **Start the development server:**
-   ```bash
-   npm run start
-   ```
-   
-   The application will automatically open at **http://localhost:4200**
+---
 
-3. **Run tests:**
-   ```bash
-   npm run test           # Run all tests
-   ```
+## ⚡ Getting Started
 
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
+### ✅ Requirements
 
-### Available NPM Scripts
+You’ll need:
 
-| Command | Description |
-|---------|-------------|
-| `npm run start` | Start dev server with auto-reload |
-| `npm run build` | Production build |
-| `npm run test` | Run Vitest tests |
-| `npm run watch` | Build in watch mode |
+* **Node.js 22 or newer**
+* **npm** (included with Node.js)
+* **Git** (optional if cloning)
+
+---
+
+## 🛠️ Setup & Usage
+
+### 1️⃣ Install all packages
+
+```bash
+npm install
+```
+
+### 2️⃣ Start the dev server
+
+```bash
+npm run start
+```
+
+The project will launch at:
+
+👉 [http://localhost:4200](http://localhost:4200)
+
+### 3️⃣ Run the test suite
+
+```bash
+npm run test
+```
+
+### 4️⃣ Build a production-ready version
+
+```bash
+npm run build
+```
+
+---
+
+## 📜 NPM Scripts Overview
+
+| Script          | Purpose                                    |
+| --------------- | ------------------------------------------ |
+| `npm run start` | Launch development server with live reload |
+| `npm run build` | Generate optimized production build        |
+| `npm run test`  | Execute all Vitest tests                   |
+| `npm run watch` | Rebuild files automatically on changes     |
+
